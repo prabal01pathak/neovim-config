@@ -17,8 +17,18 @@ return require('packer').startup(function(use)
   use("ThePrimeagen/harpoon")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
-  use('nvim-treesitter/nvim-treesitter')
   use('nvim-treesitter/nvim-treesitter-context')
+  use("github/copilot.vim")
+  use({
+          'rose-pine/neovim',
+          as = 'rose-pine',
+          config = function()
+                  vim.cmd('colorscheme rose-pine')
+          end
+  })
+  use("folke/zen-mode.nvim")
+  use("nvim-tree/nvim-tree.lua")
+  use("nvim-tree/nvim-web-devicons")
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
