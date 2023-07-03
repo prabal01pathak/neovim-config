@@ -1,7 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>..", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>..", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>.t", vim.cmd.ToggleTerm)
+vim.keymap.set("n", "<leader>.T", vim.cmd.ToggleTermToggleAll)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -13,10 +15,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>vwm", function()
-        require("vim-with-me").StartVimWithMe()
+    require("vim-with-me").StartVimWithMe()
 end)
 vim.keymap.set("n", "<leader>svwm", function()
-        require("vim-with-me").StopVimWithMe()
+    require("vim-with-me").StopVimWithMe()
 end)
 
 -- greatest remap ever
@@ -47,5 +49,5 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/prabal/packer.lua<
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
-        vim.cmd("so")
+    vim.cmd("so")
 end)
